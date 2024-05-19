@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf"), url("../../assets/Font/Alternative-files/AvenirNextLTPro.ttf") format("regular");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf"), url("../../assets/fonts/Alternative-files/AvenirNextLTProDemi.ttf") format("demi");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf"), url("../../assets/fonts/Alternative-files/AvenirNextLTProBold.ttf") format("bold");
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0px;
+  padding: 0 1rem;
+}
+
+body {
+  background-color: #FFFFFF;
+  font: "Avenir Next";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: #323232;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #323232;
+}
+
+h3 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  color: #323232;
+}
+
+footer {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #323232;
+}
+
+.nav-bar {
+  padding: 0rem;
+}
+.nav-bar__background {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar__list-items {
+  color: #AFAFAF;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__contact {
+  margin: 1rem, 0;
+  padding: 1rem, 0;
+}
+.footer__logo {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+.footer __logo-copyright {
+  align-items: start;
+}
+
+.hero-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/hero-bio.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  height: 45vh;
+}
+.hero-banner--layout {
+  display: flex;
+  align-items: center;
+}
+.hero-banner__title {
+  color: #FFFFFF;
+  margin-right: 1rem;
+}
+
+.about-section {
+  padding: 1rem;
+}
+.about-section__title {
+  margin-top: 0.5rem;
+}
+.about-section__img {
+  width: 15vw;
+}
+.about-section__description {
+  color: #323232;
+  font-weight: 700;
+}
+
+.about-subsection {
+  padding: 1rem;
+}
+.about-subsection__article {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.gallery-section {
+  background-color: #FAFAFA;
+}
+.gallery-section__title {
+  margin: 1.5rem, 1rem;
+}
+.gallery-section__image {
+  margin: 1.5rem, 1rem;
+}/*# sourceMappingURL=bio.css.map */
