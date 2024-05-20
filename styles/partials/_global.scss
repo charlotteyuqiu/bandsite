@@ -8,28 +8,27 @@
 }
 
 html{
-    margin:0px;
-    padding: 0 1rem;
+    margin:0rem;
 }
 
 body{
     background-color: $White;
     font: "Avenir Next";
-    font-size:0.8125rem;
+    font-size: 1.2rem;
     line-height:1.125rem;
     font-weight:400; 
     color: $BandSite-Black;
 }
 
 h1{
-    font-size:1.5rem;
+    font-size: 2.5rem;
     line-height:2rem;
     font-weight:700;
     color: $White;
 }
 
 h2{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     line-height:2rem;
     font-weight:700;
     color: $BandSite-Black;
@@ -37,14 +36,14 @@ h2{
 }
 
 h3{
-    font-size: 0.875rem;
+    font-size: 1.5rem;
     line-height:1.375rem;
     font-weight:600; 
     color: $BandSite-Black;
 }
 
 footer{
-    padding:1rem;
+    padding:2rem;
     font-size: 0.8125rem;
     line-height:1.125rem;
     font-weight:400; 
@@ -64,17 +63,16 @@ footer{
 
     &__logo{
         margin:1rem;
+        width: 25vw;
     }
-
-    &__link--active {
-        border-bottom: 3px solid $White;
-      }
     
     
     &__background{
     display:flex;
     flex-direction: column;
     align-items: center;
+    border-image: linear-gradient(to right, white 50%, transparent 50%) 1;
+    border-bottom: 5px solid white;
     }
 
     &__list {
@@ -91,7 +89,8 @@ footer{
         list-style-type: none;
         width:50vw;
         text-align:center;
-        padding-bottom: 1rem;
+        padding-bottom: 1.5rem;
+        font-size: 1.75rem;
         
     }
       

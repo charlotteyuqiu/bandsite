@@ -1,5 +1,5 @@
 @use"./partials/mixin"  as *;
-@use"./partials/typography"  as *;
+// @use"./partials/typography"  as *;
 @use"./partials/variables"  as *;
 @use "./partials/global" as *;
 
@@ -19,8 +19,9 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 }
 
    &__title{
-    color:$White;
-    margin:1.5rem;
+    color: $White;
+    margin: 2rem;
+    padding: 0.5rem;
   }
 }
 

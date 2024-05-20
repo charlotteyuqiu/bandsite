@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf"), url("../../assets/Font/Alternative-files/AvenirNextLTPro.ttf") format("regular");
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../../assets/Font/Alternative-files/AvenirNextLTPro.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf"), url("../../assets/fonts/Alternative-files/AvenirNextLTProDemi.ttf") format("demi");
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"), url("../../assets/fonts/Alternative-files/AvenirNextLTProDemi.ttf") format("truetype");
   font-weight: 600;
 }
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf"), url("../../assets/fonts/Alternative-files/AvenirNextLTProBold.ttf") format("bold");
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/fonts/Alternative-files/AvenirNextLTProBold.ttf") format("truetype");
   font-weight: 700;
 }
 * {
@@ -18,42 +18,41 @@
 }
 
 html {
-  margin: 0px;
-  padding: 0 1rem;
+  margin: 0rem;
 }
 
 body {
   background-color: #FFFFFF;
   font: "Avenir Next";
-  font-size: 0.8125rem;
+  font-size: 1.2rem;
   line-height: 1.125rem;
   font-weight: 400;
   color: #323232;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 2rem;
   font-weight: 700;
   color: #FFFFFF;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 2rem;
   font-weight: 700;
   color: #323232;
 }
 
 h3 {
-  font-size: 0.875rem;
+  font-size: 1.5rem;
   line-height: 1.375rem;
   font-weight: 600;
   color: #323232;
 }
 
 footer {
-  padding: 1rem;
+  padding: 2rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -68,14 +67,15 @@ footer {
 }
 .nav-bar__logo {
   margin: 1rem;
-}
-.nav-bar__link--active {
-  border-bottom: 3px solid #FFFFFF;
+  width: 25vw;
 }
 .nav-bar__background {
   display: flex;
   flex-direction: column;
   align-items: center;
+  -o-border-image: linear-gradient(to right, white 50%, transparent 50%) 1;
+     border-image: linear-gradient(to right, white 50%, transparent 50%) 1;
+  border-bottom: 5px solid white;
 }
 .nav-bar__list {
   display: flex;
@@ -90,7 +90,8 @@ footer {
   list-style-type: none;
   width: 50vw;
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.75rem;
 }
 
 .footer {
@@ -144,7 +145,8 @@ footer {
 }
 .hero-banner__title {
   color: #FFFFFF;
-  margin: 1.5rem;
+  margin: 2rem;
+  padding: 0.5rem;
 }
 
 .about-section {
