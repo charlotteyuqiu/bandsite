@@ -11,57 +11,73 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  height:45vh;
 
    &--layout{
     display: flex;
     align-items: center;
+    height:45vh;
 }
 
    &__title{
     color:$White;
-    margin-right:1rem;
+    margin:1.5rem;
   }
 }
 
 // About the Musicians Section
 .about-section{
   padding:1rem;
+  margin:0 1rem;
+  color: $BandSite-Black;
 
   &__title{
     margin-top:0.5rem;
   }
 
   &__img{
-    width:15vw;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+
   }
 
   &__description{
-    color: $BandSite-Black;
     font-weight:700;
   }
-}
-
-.about-subsection{
-  padding:1rem;
 
   &__article{
-    margin:1rem;
-    padding: 1rem;
+    color: $BandSite-Black;
   }
 }
+
 
 // Photo Gallery Section
 
 .gallery-section{
+  padding: 1.5rem 1rem 1rem 1rem;
   background-color: $Alabaster;
 
+  &__container {
+    @include desktop {
+      margin: 0 auto;
+      max-width: 1280px;
+    }
+  }
+
+
   &__title{
-    margin: 1.5rem,1rem;
+    margin-top: 0;
+  }
+
+  &__img-cards{
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   &__image{
-    margin: 1.5rem,1rem;
+    width: 100%;
+    height: auto;
   }
 }
 
