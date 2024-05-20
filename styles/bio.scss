@@ -1,5 +1,5 @@
 @use"./partials/mixin"  as *;
-// @use"./partials/typography"  as *;
+@use"./partials/typography"  as *;
 @use"./partials/variables"  as *;
 @use "./partials/global" as *;
 
@@ -16,6 +16,17 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     display: flex;
     align-items: center;
     height:45vh;
+
+    @include tablet {
+      height: 50vh;
+    }
+
+    @include desktop {
+      height: 60vh;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
 }
 
    &__title{
@@ -23,13 +34,18 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     margin: 2rem;
     padding: 0.5rem;
   }
+
 }
 
 // About the Musicians Section
 .about-section{
   padding:1rem;
   margin:0 1rem;
-  color: $BandSite-Black;
+  @include desktop {
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+
 
   &__title{
     margin-top:0.5rem;
@@ -39,6 +55,9 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     max-width: 100%;
     height: auto;
     margin-bottom: 1rem;
+    @include tablet {
+      margin-bottom: 2.25rem;
+    }
 
   }
 
@@ -46,9 +65,23 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     font-weight:700;
   }
 
+  &__sub--layout{
+    @include tablet {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+  }
+
   &__article{
     color: $BandSite-Black;
+   
   }
+
+  @include tablet {
+    margin: 0 2.25rem;
+  }
+
 }
 
 
@@ -68,17 +101,34 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 
   &__title{
     margin-top: 0;
+    @include tablet {
+      padding: 3rem 2.25rem 2.25rem 2.25rem;
+      margin-top: 0rem;
+    }
+  
   }
 
   &__img-cards{
     display:flex;
     flex-direction: column;
     gap: 1rem;
+    @include tablet {
+      display:flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
   }
 
   &__image{
     width: 100%;
     height: auto;
+    @include tablet {
+      width: 33%;
+      padding: 0.8rem;
+    }
+  
   }
+ 
 }
 
