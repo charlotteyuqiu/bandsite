@@ -34,8 +34,8 @@ body {
 }
 @media (min-width: 1024px) {
   body {
-    font-size: 1.4rem;
-    line-height: 1.7rem;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
   }
 }
 
@@ -56,6 +56,12 @@ h1 {
     line-height: 4.25rem;
   }
 }
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+}
 
 h2 {
   font-size: 1.5rem;
@@ -68,6 +74,12 @@ h2 {
     line-height: 2.75rem;
   }
 }
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
 
 h3 {
   font-size: 1.5rem;
@@ -76,8 +88,8 @@ h3 {
 }
 @media (min-width: 768px) {
   h3 {
-    font-size: 1.8rem;
-    line-height: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
   }
 }
 @media (min-width: 1024px) {
@@ -111,7 +123,6 @@ h3 {
 }
 @media (min-width: 1024px) {
   .nav-bar__background {
-    max-width: 1280px;
     margin: 0 auto;
   }
 }
@@ -161,11 +172,17 @@ h3 {
 }
 @media (min-width: 768px) {
   .footer {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.3rem;
     display: flex;
     align-items: center;
     gap: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 }
 .footer__container {
@@ -173,7 +190,6 @@ h3 {
 }
 @media (min-width: 1024px) {
   .footer__container {
-    max-width: 1280px;
     margin: 0 auto;
     gap: 3.8rem;
   }
@@ -309,7 +325,6 @@ h3 {
 @media (min-width: 1024px) {
   .hero-banner--layout {
     height: 60vh;
-    max-width: 1280px;
     margin: 0 auto;
   }
 }
