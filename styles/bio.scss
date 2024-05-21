@@ -41,10 +41,12 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 .about-section{
   padding:1rem;
   margin:0 1rem;
+  
   @include desktop {
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 100%;
   }
+
 
 
   &__title{
@@ -124,7 +126,7 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     width: 100%;
     height: auto;
     @include tablet {
-      width: 33%;
+      width: 30%;
       padding: 0.8rem;
     }
   

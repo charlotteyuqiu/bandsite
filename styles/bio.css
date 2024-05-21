@@ -28,8 +28,14 @@ body {
 }
 @media (min-width: 768px) {
   body {
-    font-size: 0.875rem;
+    font-size: 1.23rem;
     line-height: 1.375rem;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
   }
 }
 
@@ -70,28 +76,31 @@ h3 {
 }
 @media (min-width: 768px) {
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 1.8rem;
     line-height: 2rem;
   }
 }
 
 .nav-bar {
-  padding: 0rem;
+  padding: 1rem;
   margin: 0;
   background-color: #323232;
   overflow: hidden;
 }
 .nav-bar__logo {
   margin: 1rem;
-  width: 25vw;
+  width: 20vw;
 }
 .nav-bar__background {
   display: flex;
   flex-direction: column;
   align-items: center;
-  -o-border-image: linear-gradient(to right, white 50%, transparent 50%) 1;
-     border-image: linear-gradient(to right, white 50%, transparent 50%) 1;
-  border-bottom: 5px solid white;
 }
 @media (min-width: 768px) {
   .nav-bar__background {
@@ -119,11 +128,12 @@ h3 {
 }
 .nav-bar__list-items {
   color: #E1E1E1;
-  display: inline-block;
+  display: flex;
   text-decoration: none;
   list-style-type: none;
   width: 50vw;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 1.5rem;
   font-size: 1.75rem;
 }
@@ -132,6 +142,9 @@ h3 {
     padding-bottom: 2.0625rem;
     width: 20vw;
   }
+}
+.nav-bar__link--active {
+  border-bottom: 3px solid #FFFFFF;
 }
 
 .footer {
@@ -155,15 +168,15 @@ h3 {
     gap: 2.5rem;
   }
 }
+.footer__container {
+  width: 100%;
+}
 @media (min-width: 1024px) {
-  .footer {
+  .footer__container {
     max-width: 1280px;
     margin: 0 auto;
     gap: 3.8rem;
   }
-}
-.footer__container {
-  width: 100%;
 }
 .footer__title {
   color: #FFFFFF;
@@ -266,6 +279,13 @@ h3 {
   margin-top: 2rem;
   max-width: 120px;
 }
+@media (min-width: 768px) {
+  .footer__logo {
+    max-width: 120%;
+    width: 120%;
+    height: auto;
+  }
+}
 .footer __logo-copyright {
   align-items: start;
 }
@@ -306,7 +326,7 @@ h3 {
 @media (min-width: 1024px) {
   .about-section {
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 100%;
   }
 }
 .about-section__title {
@@ -377,7 +397,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .gallery-section__image {
-    width: 33%;
+    width: 30%;
     padding: 0.8rem;
   }
 }/*# sourceMappingURL=bio.css.map */

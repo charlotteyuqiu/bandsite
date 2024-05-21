@@ -19,9 +19,13 @@ body{
     font-weight:400; 
     color: $BandSite-Black;
     @include tablet {
-        font-size: 0.875rem;
+        font-size: 1.23rem;
         line-height: 1.375rem;
       }
+    @include desktop{
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+    }
     
 
 }
@@ -60,23 +64,27 @@ h3{
     line-height:1.375rem;
     font-weight:600; 
     @include tablet {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         line-height: 2rem;
       }
+   @include desktop{
+    font-size: 1.8rem;
+    line-height: 2rem;
+   }
     
 }
 
 
 // nav-bar
 .nav-bar{
-    padding: 0rem;
+    padding: 1rem;
     margin:0;
     background-color: $BandSite-Black;
     overflow: hidden;
 
     &__logo{
         margin:1rem;
-        width: 25vw;
+        width: 20vw;
     }
     
     
@@ -84,8 +92,6 @@ h3{
     display:flex;
     flex-direction: column;
     align-items: center;
-    border-image: linear-gradient(to right, white 50%, transparent 50%) 1;
-    border-bottom: 5px solid white;
     @include tablet {
         flex-direction: row;
         align-items: flex-start;
@@ -112,11 +118,12 @@ h3{
 
     &__list-items{
         color:$Mercury;
-        display:inline-block;
+        display:flex;
         text-decoration: none;
         list-style-type: none;
         width:50vw;
-        text-align:center;
+        align-items: center;
+        justify-content: center;
         padding-bottom: 1.5rem;
         font-size: 1.75rem;
         @include tablet {
@@ -125,6 +132,11 @@ h3{
           }
       
     }
+
+    &__link--active {
+      border-bottom: 3px solid $White;
+    }
+  
       
 }
 
@@ -150,14 +162,15 @@ h3{
   
       }
     
-      @include desktop {
-        max-width: 1280px;
-        margin: 0 auto;
-        gap:3.8rem;
-      }
+     
 
   &__container{
     width: 100%;
+    @include desktop {
+      max-width: 1280px;
+      margin: 0 auto;
+      gap:3.8rem;
+    }
   }
   
 
@@ -212,6 +225,7 @@ h3{
         justify-content: space-between;
         gap: 2rem;
       }
+  
     }
 
     &__contact{
@@ -239,9 +253,7 @@ h3{
     }
 
 
-  
-
-    &__address--smaller{
+     &__address--smaller{
         width:26%;
         @include tablet {
           width:auto;
@@ -266,12 +278,16 @@ h3{
     }
 
     }
-  
       
     }
     &__logo{
       margin-top:2rem;
       max-width:120px;
+      @include tablet{
+        max-width:120%;
+        width: 120%;
+        height: auto;
+      }
     }
 
    & __logo-copyright{
