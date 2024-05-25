@@ -1,21 +1,20 @@
-@use"./partials/mixin"  as *;
-@use"./partials/typography"  as *;
-@use"./partials/variables"  as *;
+@use "./partials/mixin" as *;
+@use "./partials/typography" as *;
+@use "./partials/variables" as *;
 @use "./partials/global" as *;
 
-
 // hero section
-.hero-banner{
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+.hero-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
   overflow: hidden;
 
-   &--layout{
+  &--layout {
     display: flex;
     align-items: center;
-    height:45vh;
+    height: 45vh;
 
     @include tablet {
       height: 50vh;
@@ -25,70 +24,61 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       height: 60vh;
       margin: 0 auto;
     }
+  }
 
-}
-
-   &__title{
+  &__title {
     color: $White;
     margin: 2rem;
     padding: 0.5rem;
   }
-
 }
 
 // About the Musicians Section
-.about-section{
-  padding:1rem;
-  margin:0 1rem;
-  
+.about-section {
+  padding: 1rem;
+  margin: 0 1rem;
+
   @include desktop {
     margin: 0 auto;
     max-width: 100%;
   }
 
-
-
-  &__title{
-    margin-top:0.5rem;
+  &__title {
+    margin-top: 0.5rem;
   }
 
-  &__img{
+  &__img {
     max-width: 100%;
     height: auto;
     margin-bottom: 1rem;
     @include tablet {
       margin-bottom: 2.25rem;
     }
-
   }
 
-  &__description{
-    font-weight:700;
+  &__description {
+    font-weight: 700;
   }
 
-  &__sub--layout{
+  &__sub--layout {
     @include tablet {
       display: flex;
       gap: 1.5rem;
     }
-
   }
 
-  &__article{
+  &__article {
     color: $BandSite-Black;
-   
   }
 
   @include tablet {
     margin: 0 2.25rem;
   }
-
 }
-
 
 // Photo Gallery Section
 
-.gallery-section{
+.gallery-section {
   padding: 1.5rem 1rem 1rem 1rem;
   background-color: $Alabaster;
 
@@ -98,75 +88,82 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     }
   }
 
-
-  &__title{
+  &__title {
     margin-top: 0;
     @include tablet {
       padding: 3rem 2.25rem 2.25rem 2.25rem;
       margin-top: 0rem;
     }
-  
   }
 
-  &__img-cards{
-    display:flex;
+  &__img-cards {
+    display: flex;
     flex-direction: column;
     gap: 1rem;
     @include tablet {
-      display:flex;
+      display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
     }
-
   }
 
-  &__image{
+  &__image {
     width: 100%;
     height: auto;
     @include tablet {
       width: 30%;
       padding: 0.8rem;
-    }}}
+    }
+  }
+}
 
 // Join the conversation section
 
-.conversation{
-&--display{
-  display: flex;
-  gap:1rem;
-}
-&__form{
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-&__input {
-  border-radius: 4px;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid $mercury;
-  text-align: start;
-  outline: none;
-  font-family: "Avenir Next";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  background-color: $alabaster;
-}
+.conversation {
+  &--display {
+    display: flex;
+    gap: 1rem;
+  }
 
-&__label{
-  color: $silver;
+  &__image {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 20% 50%;
+    background-color: $Mercury;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__input {
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid $Mercury;
+    text-align: start;
+    outline: none;
+    font-family: "Avenir Next";
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    background-color: $Alabaster;
+  }
+
+  &__label {
+    color: $Silver;
     margin-bottom: 4px;
     text-transform: uppercase;
     font-weight: 500;
+  }
+  &__button {
+    height: 2.5rem;
+    font-size: 1.5rem;
+    color: $White;
+    background-color: $BandSite-Black;
+  }
 }
-&__button{
-  height: 2.5rem;
-  font-size: 1.5rem;
-  color: $white;
-  background-color: $bandsite-black;
-}}
-
-    
-
-

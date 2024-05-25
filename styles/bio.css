@@ -19,8 +19,8 @@
 
 body {
   margin: 0;
-  background-color: #FFFFFF;
-  font-family: "Avenir Next";
+  background-color: #ffffff;
+  font-family: "Avenir Next", sans-serif;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -32,7 +32,7 @@ body {
     line-height: 1.375rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   body {
     font-size: 1.6rem;
     line-height: 1.8rem;
@@ -48,7 +48,7 @@ h1 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   h1 {
@@ -56,7 +56,7 @@ h1 {
     line-height: 4.25rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   h1 {
     font-size: 4rem;
     line-height: 4.5rem;
@@ -74,7 +74,7 @@ h2 {
     line-height: 2.75rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   h2 {
     font-size: 2.5rem;
     line-height: 3rem;
@@ -92,7 +92,7 @@ h3 {
     line-height: 1.6rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   h3 {
     font-size: 1.8rem;
     line-height: 2rem;
@@ -121,7 +121,7 @@ h3 {
     gap: 3rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .nav-bar__background {
     margin: 0 auto;
   }
@@ -138,7 +138,7 @@ h3 {
   }
 }
 .nav-bar__list-items {
-  color: #E1E1E1;
+  color: #e1e1e1;
   display: flex;
   text-decoration: none;
   list-style-type: none;
@@ -155,7 +155,7 @@ h3 {
   }
 }
 .nav-bar__link--active {
-  border-bottom: 3px solid #FFFFFF;
+  border-bottom: 3px solid #ffffff;
 }
 
 .footer {
@@ -166,7 +166,7 @@ h3 {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #323232;
   overflow: hidden;
 }
@@ -179,7 +179,7 @@ h3 {
     gap: 2.5rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .footer {
     font-size: 1.2rem;
     line-height: 1.5rem;
@@ -188,14 +188,14 @@ h3 {
 .footer__container {
   width: 100%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .footer__container {
     margin: 0 auto;
     gap: 3.8rem;
   }
 }
 .footer__title {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .footer__title {
@@ -250,7 +250,7 @@ h3 {
   margin: 1rem, 0;
   padding: 1rem, 0;
   width: 65%;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 600;
 }
 @media (min-width: 768px) {
@@ -261,7 +261,7 @@ h3 {
     width: auto;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .footer__contact {
     gap: 3.5rem;
   }
@@ -276,7 +276,7 @@ h3 {
 }
 .footer__contact-text {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .footer__bottom {
@@ -322,14 +322,14 @@ h3 {
     height: 50vh;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .hero-banner--layout {
     height: 60vh;
     margin: 0 auto;
   }
 }
 .hero-banner__title {
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 2rem;
   padding: 0.5rem;
 }
@@ -338,7 +338,7 @@ h3 {
   padding: 1rem;
   margin: 0 1rem;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .about-section {
     margin: 0 auto;
     max-width: 100%;
@@ -377,12 +377,11 @@ h3 {
 
 .gallery-section {
   padding: 1.5rem 1rem 1rem 1rem;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .gallery-section__container {
     margin: 0 auto;
-    max-width: 1280px;
   }
 }
 .gallery-section__title {
@@ -415,4 +414,49 @@ h3 {
     width: 30%;
     padding: 0.8rem;
   }
+}
+
+.conversation--display {
+  display: flex;
+  gap: 1rem;
+}
+.conversation__image {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 20% 50%;
+     object-position: 20% 50%;
+  background-color: #e1e1e1;
+}
+.conversation__form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.conversation__input {
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e1e1e1;
+  text-align: start;
+  outline: none;
+  font-family: "Avenir Next";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  background-color: #fafafa;
+}
+.conversation__label {
+  color: #afafaf;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.conversation__button {
+  height: 2.5rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: #323232;
 }/*# sourceMappingURL=bio.css.map */
