@@ -1,0 +1,120 @@
+//HERO
+.hero {
+  &__background-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../assets/Images/hero-shows.jpg");
+    background-position-y: 30%;
+  }
+
+  &__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    @include tablet {
+      gap: 2.25rem;
+      height: 70vh;
+    }
+    @include desktop {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0;
+      height: 80vh;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    width: 220px;
+    @include tablet {
+      width: 550px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+    color: $white;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    @include tablet {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+
+  &__music-frame {
+    width: 100%;
+    height: 20vh;
+    margin: 0;
+    @include tablet {
+      width: 400px;
+    }
+    @include desktop {
+      padding-top: 2rem;
+      width: 38%;
+    }
+  }
+}
+
+//SHOWS
+.shows {
+  padding-bottom: 1rem;
+  @include tablet {
+    padding: 0 1.125rem;
+    padding-bottom: 2.25rem;
+  }
+
+  &__container {
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      gap: 9.3rem;
+      margin: 0 auto;
+      max-width: 1316px;
+    }
+  }
+
+  &__table {
+    @include desktop {
+      flex-grow: 1;
+      margin-top: 4.0625rem;
+    }
+  }
+
+  &__heading {
+    padding-left: 1rem;
+    @include tablet {
+      padding-left: 1.125rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    border-bottom: 1px solid $Mercury;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    @include tablet {
+      padding: 1.5rem 1.125rem;
+      flex-direction: row;
+    }
+  }
+
+  &__wrap {
+    @include tablet {
+      flex: 1;
+    }
+    @include desktop {
+      &:first-child {
+        flex: 1.3 1 0;
+      }
+    }
+  }
+}

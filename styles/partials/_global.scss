@@ -2,311 +2,276 @@
 @use "./mixin" as *;
 @use "./typography" as *;
 
-
-*{
-    box-sizing: border-box;
-   
-  
+* {
+  box-sizing: border-box;
 }
 
-
-body{
-    margin:0;
-    background-color: $White;
-    font-family: $font-family;
-    font-size: 0.8125rem;
-    line-height:1.125rem;
-    font-weight:400; 
-    color: $BandSite-Black;
-    @include tablet {
-        font-size: 1.23rem;
-        line-height: 1.375rem;
-      }
-    @include desktop{
-      font-size: 1.6rem;
-      line-height: 1.8rem;
-    }
-    
-
+body {
+  margin: 0;
+  background-color: $White;
+  font-family: $font-family, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: $BandSite-Black;
+  @include tablet {
+    font-size: 1.23rem;
+    line-height: 1.375rem;
+  }
+  @include desktop {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
 }
 
-P{
-    margin-top:0;
-    margin-bottom:1rem;
+P {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-h1{
-    font-size: 1.5rem;
-    line-height:2rem;
-    font-weight:700;
-    color: $White;
-    @include tablet {
-        font-size: 3.75rem;
-        line-height: 4.25rem;
-      }
-    
-      @include desktop {
-        font-size: 4rem;
-        line-height: 4.5rem;
-      }
-    
+h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: $White;
+  @include tablet {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+
+  @include desktop {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
 }
 
-h2{
-    font-size: 1.5rem;
-    line-height:2rem;
-    font-weight:700;
-    @include tablet {
-        font-size: 2.25rem;
-        line-height: 2.75rem;
-      }
-    
-    @include desktop {
-        font-size: 2.5rem;
-        line-height: 3rem;
-      }
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  @include tablet {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+
+  @include desktop {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
 }
 
-h3{
-    font-size: 1.5rem;
-    line-height:1.375rem;
-    font-weight:600; 
-    @include tablet {
-      font-size: 1.6rem;
-      line-height: 1.6rem;
-      }
-   @include desktop{
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  @include tablet {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+  @include desktop {
     font-size: 1.8rem;
     line-height: 2rem;
-   }
-    
+  }
 }
 
-
 // nav-bar
-.nav-bar{
-    padding: 1rem;
-    margin:0;
-    background-color: $BandSite-Black;
-    overflow: hidden;
+.nav-bar {
+  padding: 1rem;
+  margin: 0;
+  background-color: $BandSite-Black;
+  overflow: hidden;
 
-    &__logo{
-        margin:1rem;
-        width: 20vw;
-    }
-    
-    
-    &__background{
-    display:flex;
+  &__logo {
+    margin: 1rem;
+    width: 20vw;
+  }
+
+  &__background {
+    display: flex;
     flex-direction: column;
     align-items: center;
     @include tablet {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 3rem;
-      }
-      @include desktop {
-        margin: 0 auto;
-  
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 3rem;
     }
-
+    @include desktop {
+      margin: 0 auto;
     }
+  }
 
-    &__list {
-    display:flex;
+  &__list {
+    display: flex;
     justify-content: center;
-    text-align:start;
-    gap:0.5rem;
+    text-align: start;
+    gap: 0.5rem;
     @include tablet {
-        gap: 1rem;
-      }
-  
+      gap: 1rem;
     }
+  }
 
-    &__list-items{
-        color:$Mercury;
-        display:flex;
-        text-decoration: none;
-        list-style-type: none;
-        width:50vw;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 1.5rem;
-        font-size: 1.75rem;
-        @include tablet {
-            padding-bottom: 2.0625rem;
-            width:20vw;
-          }
-      
+  &__list-items {
+    color: $Mercury;
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+    font-size: 1.75rem;
+    @include tablet {
+      padding-bottom: 2.0625rem;
+      width: 20vw;
     }
+  }
 
-    &__link--active {
-      border-bottom: 3px solid $White;
-    }
-  
-      
+  &__link--active {
+    border-bottom: 3px solid $White;
+  }
 }
 
 // footer
-.footer{
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding:2rem;
-    font-size: 0.8125rem;
-    line-height:1.125rem;
-    font-weight:400; 
-    color: $White;
-    background-color: $BandSite-Black;
-    overflow: hidden;
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: $White;
+  background-color: $BandSite-Black;
+  overflow: hidden;
 
-    @include tablet {
-      font-size: 1rem;
-      line-height: 1.3rem;
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
-  
-      }
+  @include tablet {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
 
-      @include desktop {
-      font-size: 1.2rem;
-      line-height: 1.5rem;
-    }
-    
-     
+  @include desktop {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
 
-  &__container{
+  &__container {
     width: 100%;
     @include desktop {
       margin: 0 auto;
-      gap:3.8rem;
+      gap: 3.8rem;
     }
   }
-  
 
-    &__title{
-        color: $White;
-        @include tablet{
-        padding-right: 2rem;
-        }
+  &__title {
+    color: $White;
+    @include tablet {
+      padding-right: 2rem;
     }
-    
-   
+  }
 
-    &__social{
-        display:flex;
-        margin-bottom: 1.5rem;
-        gap: 1rem;
-        @include tablet {
-          gap: 1.5rem;
-          align-items: center;
-          margin-top: 1.6rem;
-          margin-right: auto;
-       }
-     }
-
-
-       &__icon{
-       @include tablet {
-        height: 5vh;
-        max-height: 28px;
-       }
-      }
-
-      &__top{
-        @include tablet {
-          display:flex
-        }
-  
+  &__social {
+    display: flex;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    @include tablet {
+      gap: 1.5rem;
+      align-items: center;
+      margin-top: 1.6rem;
+      margin-right: auto;
     }
+  }
 
-    &__logo--right{
-      display:none;
-      @include tablet {
-        display:inline;
-      }
+  &__icon {
+    @include tablet {
+      height: 5vh;
+      max-height: 28px;
     }
+  }
 
-
-    &__middle{
-      @include tablet{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 2rem;
-      }
-  
+  &__top {
+    @include tablet {
+      display: flex;
     }
+  }
 
-    &__contact{
-        display:flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-bottom:2.25rem;
-        margin:1rem,0;
-        padding:1rem,0;
-        width:65%;
-        color: $White;
-        font-weight: 600;
-    
+  &__logo--right {
+    display: none;
+    @include tablet {
+      display: inline;
+    }
+  }
+
+  &__middle {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.25rem;
+    margin: 1rem, 0;
+    padding: 1rem, 0;
+    width: 65%;
+    color: $White;
+    font-weight: 600;
 
     @include tablet {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 2.25rem;
-        width:auto;
-      }
-
-      @include desktop {
-        gap: 3.5rem;
-      }
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2.25rem;
+      width: auto;
     }
 
-
-     &__address--smaller{
-        width:26%;
-        @include tablet {
-          width:auto;
-        }
+    @include desktop {
+      gap: 3.5rem;
     }
+  }
 
-    &__contact-text{
-        text-decoration: none;
-        color: $White;
+  &__address--smaller {
+    width: 26%;
+    @include tablet {
+      width: auto;
     }
+  }
 
-    // footer bottom
-    &__bottom{
-      @include tablet {
-        display: none;
-      }
+  &__contact-text {
+    text-decoration: none;
+    color: $White;
+  }
 
-    &__tablet-logo{
+  // footer bottom
+  &__bottom {
+    @include tablet {
       display: none;
-    @include tablet {
-      display: block;
     }
 
-    }
-      
-    }
-    &__logo{
-      margin-top:2rem;
-      max-width:120px;
-      @include tablet{
-        max-width:120%;
-        width: 120%;
-        height: auto;
+    &__tablet-logo {
+      display: none;
+      @include tablet {
+        display: block;
       }
     }
+  }
+  &__logo {
+    margin-top: 2rem;
+    max-width: 120px;
+    @include tablet {
+      max-width: 120%;
+      width: 120%;
+      height: auto;
+    }
+  }
 
-   & __logo-copyright{
-     align-items: start;
-   }
+  & __logo-copyright {
+    align-items: start;
+  }
 }
-
-
-
-
-
