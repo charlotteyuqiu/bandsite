@@ -33,16 +33,23 @@ class Comment {
 // li structure
 function addComment(comment) {
   const listItem = document.createElement("li");
-  const nameSpan = document.createElement("span");
-  const timeSpan = document.createElement("span");
+  listItem.classList.add("conversation__list-item");
+  const nameSpan = document.createElement("div");
+  nameSpan.classList.add("conversation__name");
+  const timeSpan = document.createElement("div");
+  timeSpan.classList.add("conversation__date");
   const commentText = document.createElement("p");
 
   nameSpan.textContent = comment.name + " ";
   timeSpan.textContent = ` [${comment.timestamp}] `;
   commentText.textContent = comment.comment;
 
-  listItem.appendChild(nameSpan);
-  listItem.appendChild(timeSpan);
+  const nameTime = document.createElement("div");
+  nameTime.classList.add("conversation__name-time");
+  nameTime.appendChild(nameSpan);
+  nameTime.appendChild(timeSpan);
+
+  listItem.appendChild(nameTime);
   listItem.appendChild(commentText);
   commentList.prepend(listItem);
 }
@@ -65,7 +72,7 @@ form.addEventListener("submit", (event) => {
     const timestamp = new Date().toLocaleString();
     const newComment = new Comment(name, timestamp, comment);
     comments.push(newComment);
-    addCommentToDOM(newComment);
+    addComment(newComment);
   }
   form.reset();
 });

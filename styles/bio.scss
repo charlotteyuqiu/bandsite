@@ -125,6 +125,10 @@
   &--display {
     display: flex;
     gap: 1rem;
+    @include desktop {
+      width: 70%;
+      margin: auto;
+    }
   }
 
   &__image {
@@ -154,18 +158,77 @@
     line-height: 1.125rem;
     font-weight: 400;
     background-color: $Alabaster;
+    color: $BandSite-DarkBlack;
   }
 
   &__label {
     color: $Silver;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-    font-weight: 500;
+    margin-bottom: 0.25rem;
   }
   &__button {
     height: 2.5rem;
     font-size: 1.5rem;
     color: $White;
     background-color: $BandSite-Black;
+    @include tablet {
+      padding: 0 2rem;
+      width: 12.5rem;
+      margin-left: auto;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 2rem;
+    @include tablet {
+      padding: 3rem;
+    }
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  &__list-item {
+    border-bottom: 1px solid $Mercury;
+    margin-bottom: 1rem;
+    padding-left: 3.125rem;
+    gap: 1rem;
+    color: $BandSite-DarkBlack;
+  }
+  &__list-item::before {
+    content: "";
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    left: 3.75rem;
+    background-color: $Mercury;
+    border-radius: 50%;
+    @include desktop {
+      left: 18rem;
+    }
+  }
+
+  &__name-date {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  &__comment-detail {
+    flex-grow: 1;
+  }
+
+  &__name {
+    font-weight: 500;
+  }
+
+  &__date {
+    color: $Silver;
+  }
+
+  &__name-time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 }
