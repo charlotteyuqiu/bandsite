@@ -150,12 +150,29 @@ h3 {
 }
 @media (min-width: 768px) {
   .nav-bar__list-items {
-    padding-bottom: 2.0625rem;
+    padding-bottom: 2rem;
     width: 20vw;
   }
 }
 .nav-bar__link--active {
   border-bottom: 3px solid #ffffff;
+}
+.nav-bar__link {
+  text-decoration: none;
+  color: #e1e1e1;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .nav-bar__link {
+    padding-bottom: 2rem;
+  }
+}
+.nav-bar__link:hover {
+  border-bottom: 3px solid #ffffff;
+  color: #ffffff;
+}
+.nav-bar__link:active {
+  font-weight: bold;
 }
 
 .footer {
@@ -416,6 +433,9 @@ h3 {
   }
 }
 
+.conversation {
+  padding: 1rem;
+}
 .conversation--display {
   display: flex;
   gap: 1rem;

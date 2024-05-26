@@ -2,12 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=
-    , initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/shows.css" />
+    <script src="../scripts/build-shows-page.js" defer></script>
 
     <title>Shows</title>
   </head>
@@ -26,14 +23,16 @@
         </div>
         <ul class="nav-bar__list">
           <li>
-            <a
-              class="nav-bar__list-items nav-bar__link--active"
-              href="../index.html"
+            <a class="nav-bar__list-items nav-bar__link" href="../index.html"
               >Biography</a
             >
           </li>
-          <li class>
-            <a class="nav-bar__list-items" href="./shows.html">Shows</a>
+          <li>
+            <a
+              class="nav-bar__list-items nav-bar__link--active nav-bar__link"
+              href="./shows.html"
+              >Shows</a
+            >
           </li>
         </ul>
       </nav>
@@ -50,15 +49,13 @@
 
           <iframe
             class="hero__music-frame"
-            scrolling="no"
-            frameborder="no"
             allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1322831941&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1734880149&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
           ></iframe>
         </div>
       </section>
 
-      <!-- SHOWS -->
+      <!-- SHOWS
       <section class="shows">
         <div class="shows__container">
           <h2 class="shows__heading"></h2>
@@ -66,7 +63,8 @@
             <ul class="shows__list"></ul>
           </div>
         </div>
-      </section>
+        <button class="buy-tickets-button">BUY TICKETS</button>
+      </section> -->
 
       <!-- footer section -->
       <footer class="footer">

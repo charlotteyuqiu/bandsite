@@ -121,13 +121,30 @@ h3 {
     padding-bottom: 1.5rem;
     font-size: 1.75rem;
     @include tablet {
-      padding-bottom: 2.0625rem;
+      padding-bottom: 2rem;
       width: 20vw;
     }
   }
 
   &__link--active {
     border-bottom: 3px solid $White;
+  }
+  &__link {
+    text-decoration: none;
+    color: $Mercury;
+    padding-bottom: 1rem;
+    @include tablet {
+      padding-bottom: 2rem;
+    }
+
+    &:hover {
+      border-bottom: 3px solid $White;
+      color: $White;
+    }
+
+    &:active {
+      font-weight: bold;
+    }
   }
 }
 

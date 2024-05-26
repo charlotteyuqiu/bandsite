@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bandsite</title>
     <link rel="stylesheet" href="./styles/bio.css" />
+    <script src="./scripts/index-page.js" defer></script>
   </head>
   <body>
     <!-- Nav header -->
@@ -22,13 +23,17 @@
         <ul class="nav-bar__list">
           <li>
             <a
-              class="nav-bar__list-items nav-bar__link--active"
+              class="nav-bar__list-items nav-bar__link--active nav-bar__link"
               href="./index.html"
               >Biography</a
             >
           </li>
           <li>
-            <a class="nav-bar__list-items" href="./pages/shows.html">Shows</a>
+            <a
+              class="nav-bar__list-items nav-bar__link"
+              href="./pages/shows.html"
+              >Shows</a
+            >
           </li>
         </ul>
       </nav>
@@ -162,14 +167,13 @@
               placeholder="Enter your name "
             />
 
-            <label for="comment">Comment</label>
+            <label class="conversation__label" for="comment">COMMENT</label>
             <textarea
               class="conversation__input"
               id="comment"
               name="comment"
               placeholder="Add a new comment"
-            >
-            </textarea>
+            ></textarea>
             <button class="conversation__button" type="submit">Comment</button>
             <ul class="conversation__list"></ul>
           </form>
@@ -257,7 +261,7 @@
           <a href="./index.html"
             ><img
               class="footer__logo"
-              src="./assets/logo/Logo-bandsite.svg"
+              src="./assets/logos/logo-bandsite.svg"
               alt="logo"
           /></a>
         </div>
