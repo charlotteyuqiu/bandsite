@@ -443,6 +443,9 @@ h3 {
 .conversation {
   padding: 1rem;
 }
+.conversation__heading {
+  margin-left: 2rem;
+}
 .conversation--display {
   display: flex;
   gap: 1rem;
@@ -533,11 +536,6 @@ h3 {
   .conversation__list-item::before {
     left: 18rem;
   }
-}
-.conversation__name-date {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2rem;
 }
 .conversation__comment-detail {
   flex-grow: 1;

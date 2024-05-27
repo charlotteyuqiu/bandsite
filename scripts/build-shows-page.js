@@ -66,7 +66,8 @@ const shows = [
     location: "San Francisco, CA",
   },
 ];
-
+//sort the shows from newest to oldest
+shows.sort((a, b) => b.timestamp - a.timestamp);
 // Add shows section by DOM manipulation
 // create elements, add class, append elements for section, heading
 const section = document.createElement("section");
@@ -142,19 +143,15 @@ const listItem = document.createElement("li");
 listItem.classList.add("show__list-detail");
 listItem.classList.add("show--display-nonePhone");
 const dateTopTitle = document.createElement("p");
-dateTopTitle.classList.add("show__list-each-detail");
 dateTopTitle.textContent = `DATE`;
 listItem.appendChild(dateTopTitle);
 const venueTopTitle = document.createElement("p");
-venueTopTitle.classList.add("show__list-each-detail");
 venueTopTitle.textContent = `VENUE`;
 listItem.appendChild(venueTopTitle);
 const locationTopInfo = document.createElement("p");
-locationTopInfo.classList.add("show__list-each-detail");
 locationTopInfo.textContent = `LOCATION`;
 listItem.appendChild(locationTopInfo);
 const placeHolder = document.createElement("p");
-placeHolder.classList.add("show__list-each-detail");
 placeHolder.textContent = ``;
 listItem.appendChild(placeHolder);
 list.appendChild(listItem);

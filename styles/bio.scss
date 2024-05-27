@@ -129,6 +129,9 @@
 .conversation {
   padding: 1rem;
 
+  &__heading {
+    margin-left: 2rem;
+  }
   &--display {
     display: flex;
     gap: 1rem;
@@ -213,12 +216,6 @@
     @include desktop {
       left: 18rem;
     }
-  }
-
-  &__name-date {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
   }
 
   &__comment-detail {

@@ -21,6 +21,9 @@ let comments = [
   },
 ];
 
+//sort
+comments.sort((a, b) => b.timestamp - a.timestamp);
+
 // set class prototype
 class Comment {
   constructor(name, timestamp, comment) {
