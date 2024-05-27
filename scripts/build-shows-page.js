@@ -1,37 +1,67 @@
 // My array for shows
 const shows = [
   {
-    timestamp: new Date("Mon Sept 09 2024").toLocaleString(),
+    timestamp: new Date("Mon Sept 09 2024").toLocaleString("en-US", {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    }),
     venue: "Ronald Lane ",
     location: "San Francisco, CA",
   },
 
   {
-    timestamp: new Date("Tue Sept 17 2024  ").toLocaleString(),
+    timestamp: new Date("Tue Sept 17 2024  ").toLocaleString("en-US", {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    }),
     venue: "Pier 3 East ",
     location: "San Francisco, CA",
   },
 
   {
-    timestamp: new Date("Sat Oct 12 2024  ").toLocaleString(),
+    timestamp: new Date("Sat Oct 12 2024  ").toLocaleString("en-US", {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    }),
     venue: "View Lounge ",
     location: "San Francisco, CA",
   },
 
   {
-    timestamp: new Date("Sat Nov 16 2024").toLocaleString(),
+    timestamp: new Date("Sat Nov 16 2024").toLocaleString("en-US", {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    }),
     venue: "Hyatt Agency ",
     location: "San Francisco, CA",
   },
 
   {
-    timestamp: new Date("Fri Nov 29 2024").toLocaleString(),
+    timestamp: new Date("Fri Nov 29 2024").toLocaleString("en-US", {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    }),
     venue: "Moscow Center",
     location: "San Francisco, CA",
   },
 
   {
-    timestamp: new Date("Wed Dec 18 2024 ").toLocaleString(),
+    timestamp: new Date("Wed Dec 18 2024 ").toLocaleString("en-US", {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    }),
     venue: "Press Club",
     location: "San Francisco, CA",
   },
@@ -107,6 +137,40 @@ const displayShows = (show) => {
   list.appendChild(listItem);
 };
 
+//layout of Header for desktop,tablet resposnive design
+const listItem = document.createElement("li");
+listItem.classList.add("show__list-detail");
+listItem.classList.add("show--display-nonePhone");
+const dateTopTitle = document.createElement("p");
+dateTopTitle.classList.add("show__list-each-detail");
+dateTopTitle.textContent = `DATE`;
+listItem.appendChild(dateTopTitle);
+const venueTopTitle = document.createElement("p");
+venueTopTitle.classList.add("show__list-each-detail");
+venueTopTitle.textContent = `VENUE`;
+listItem.appendChild(venueTopTitle);
+const locationTopInfo = document.createElement("p");
+locationTopInfo.classList.add("show__list-each-detail");
+locationTopInfo.textContent = `LOCATION`;
+listItem.appendChild(locationTopInfo);
+const placeHolder = document.createElement("p");
+placeHolder.classList.add("show__list-each-detail");
+placeHolder.textContent = ``;
+listItem.appendChild(placeHolder);
+list.appendChild(listItem);
+
 for (let i = 0; i < shows.length; i++) {
   displayShows(shows[i]);
 }
+
+// Color change while clikcing on shows
+const divs = document.querySelectorAll(".show__list-detail");
+divs.forEach(function (div) {
+  div.addEventListener("click", function () {
+    //reset back to default first
+    divs.forEach(function (d) {
+      d.classList.remove("active");
+    });
+    this.classList.add("active");
+  });
+});

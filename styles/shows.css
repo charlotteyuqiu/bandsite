@@ -330,7 +330,13 @@ h3 {
   background-position: center;
   overflow: hidden;
 }
+@media (min-width: 1280px) {
+  .hero__background-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../assets/Images/hero-shows.jpg");
+  }
+}
 .hero__container {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -348,7 +354,7 @@ h3 {
   .hero__container {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 0;
     height: 80vh;
   }
@@ -375,24 +381,20 @@ h3 {
   }
 }
 .hero__music-frame {
-  width: auto;
-  height: 20vh;
-  margin: 0;
+  width: 18rem;
+  height: 15vh;
+  margin-top: 2rem;
 }
 @media (min-width: 768px) {
   .hero__music-frame {
-    width: 25rem;
-  }
-}
-@media (min-width: 1280px) {
-  .hero__music-frame {
-    padding-top: 2rem;
-    width: 38%;
+    width: 30rem;
+    height: 20vh;
   }
 }
 
 .show {
   padding-bottom: 1rem;
+  /*hover color of shows*/
 }
 @media (min-width: 768px) {
   .show {
@@ -443,6 +445,15 @@ h3 {
     gap: 6rem;
   }
 }
+.show__list-detail.active {
+  background-color: #e1e1e1;
+}
+.show__list-detail.active:hover {
+  background-color: #fafafa;
+}
+.show__list-detail:hover {
+  background-color: #fafafa;
+}
 .show__sub-header {
   color: #afafaf;
   margin-top: 0;
@@ -451,6 +462,14 @@ h3 {
 @media (min-width: 768px) {
   .show__sub-header {
     display: none;
+  }
+}
+.show--display-nonePhone {
+  display: none;
+}
+@media (min-width: 768px) {
+  .show--display-nonePhone {
+    display: flex;
   }
 }
 .show__date-detail {

@@ -422,6 +422,13 @@ h3 {
     gap: 1.5rem;
   }
 }
+@media (min-width: 768px) {
+  .gallery-section__img-cards--row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .gallery-section__image {
   width: 100%;
   height: auto;

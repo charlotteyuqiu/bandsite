@@ -105,6 +105,13 @@
       flex-wrap: wrap;
       gap: 1.5rem;
     }
+    &--row {
+      @include tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
   }
 
   &__image {
