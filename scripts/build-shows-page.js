@@ -1,77 +1,5 @@
-// // My array for shows
-// const shows = [
-//   {
-//     timestamp: new Date("Mon Sept 09 2024").toLocaleString("en-US", {
-//       weekday: "short",
-//       year: "numeric",
-//       month: "short",
-//       day: "2-digit",
-//     }),
-//     venue: "Ronald Lane ",
-//     location: "San Francisco, CA",
-//   },
-
-//   {
-//     timestamp: new Date("Tue Sept 17 2024  ").toLocaleString("en-US", {
-//       weekday: "short",
-//       year: "numeric",
-//       month: "short",
-//       day: "2-digit",
-//     }),
-//     venue: "Pier 3 East ",
-//     location: "San Francisco, CA",
-//   },
-
-//   {
-//     timestamp: new Date("Sat Oct 12 2024  ").toLocaleString("en-US", {
-//       weekday: "short",
-//       year: "numeric",
-//       month: "short",
-//       day: "2-digit",
-//     }),
-//     venue: "View Lounge ",
-//     location: "San Francisco, CA",
-//   },
-
-//   {
-//     timestamp: new Date("Sat Nov 16 2024").toLocaleString("en-US", {
-//       weekday: "short",
-//       year: "numeric",
-//       month: "short",
-//       day: "2-digit",
-//     }),
-//     venue: "Hyatt Agency ",
-//     location: "San Francisco, CA",
-//   },
-
-//   {
-//     timestamp: new Date("Fri Nov 29 2024").toLocaleString("en-US", {
-//       weekday: "short",
-//       year: "numeric",
-//       month: "short",
-//       day: "2-digit",
-//     }),
-//     venue: "Moscow Center",
-//     location: "San Francisco, CA",
-//   },
-
-//   {
-//     timestamp: new Date("Wed Dec 18 2024 ").toLocaleString("en-US", {
-//       weekday: "short",
-//       year: "numeric",
-//       month: "short",
-//       day: "2-digit",
-//     }),
-//     venue: "Press Club",
-//     location: "San Francisco, CA",
-//   },
-// ];
-
-// //sort the shows from newest to oldest
-// shows.sort((a, b) => b.timestamp - a.timestamp);
-// Add shows section by DOM manipulation
-
 import BandSiteApi from "./band-site-api.js";
+// API Set UP
 const bandSiteApi = new BandSiteApi();
 await bandSiteApi.initializeApiKey();
 const shows = await bandSiteApi.getShowDates();
@@ -135,6 +63,7 @@ function createElements(shows) {
     listItem.appendChild(dateTitle);
     const dateInfo = document.createElement("p");
     dateInfo.classList.add("show__date-detail");
+    // Retrieve date from api result by show.date
     dateInfo.textContent = new Date(show.date).toLocaleString("en-US", {
       weekday: "short",
       year: "numeric",
@@ -150,6 +79,7 @@ function createElements(shows) {
     listItem.appendChild(venueTitle);
     const venueInfo = document.createElement("p");
     venueInfo.classList.add("show__list-each-detail");
+    // Retrieve venue from api result by show.place
     venueInfo.textContent = show.place;
     listItem.appendChild(venueInfo);
 
@@ -160,6 +90,7 @@ function createElements(shows) {
     listItem.appendChild(locationTitle);
     const locationInfo = document.createElement("p");
     locationInfo.classList.add("show__list-each-detail");
+    // Retrieve location from api result by show.location
     locationInfo.textContent = show.location;
     listItem.appendChild(locationInfo);
 
@@ -174,10 +105,6 @@ function createElements(shows) {
 }
 
 createElements(shows);
-
-// for (let i = 0; i < shows.length; i++) {
-//   displayShows(shows[i]);
-// }
 
 // Color change while clikcing on shows
 const divs = document.querySelectorAll(".show__list-detail");
