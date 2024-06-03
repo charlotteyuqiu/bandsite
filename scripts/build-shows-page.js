@@ -2,7 +2,7 @@ import BandSiteApi from "./band-site-api.js";
 // API Set UP
 const bandSiteApi = new BandSiteApi();
 await bandSiteApi.initializeApiKey();
-const shows = await bandSiteApi.getShowDates();
+const shows = await bandSiteApi.getShows();
 console.log("API KEY is:" + bandSiteApi.apiKey);
 console.log(shows);
 
