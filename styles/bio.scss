@@ -164,7 +164,7 @@
     text-align: start;
     outline: none;
     font-family: "Avenir Next";
-    font-size: 0.8125rem;
+    font-size: 1.5rem;
     line-height: 1.125rem;
     font-weight: 400;
     background-color: $Alabaster;
@@ -174,12 +174,14 @@
   &__label {
     color: $Silver;
     margin-bottom: 0.25rem;
+    border-radius: 0.25rem;
   }
   &__button {
     height: 2.5rem;
     font-size: 1.5rem;
     color: $White;
     background-color: $BandSite-Black;
+    border-radius: 0.25rem;
     @include tablet {
       padding: 0 2rem;
       width: 12.5rem;
